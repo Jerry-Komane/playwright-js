@@ -9,6 +9,14 @@ test('Login test', async ({ page }) => {
   await page.fill('#user-name', 'standard_user')
   await page.fill('id=password', 'secret_sauce');
 
+});
+
+test('Login test invalid username', async ({ page }) => {
+
+  await page.goto('https://www.saucedemo.com/');
+  await page.fill('#user-name', 'standard_users')
+  await page.fill('id=password', 'secret_sauce');
 
 });
+
 
